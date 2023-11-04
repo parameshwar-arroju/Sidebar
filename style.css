@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url('https://wallpapercave.com/wp/6SLzBEY.jpg');
+    font-family: 'Gabarito', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+input{
+    display: none;
+}
+
+.options{
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    padding: 5px;
+    -webkit-text-stroke: 1px;
+    position: absolute;
+    margin-top: 3px;
+    transition: 0.5s ease;
+    transform: translateX(0);
+}
+
+.options:hover i{
+    text-shadow: 0 0 5px rgba(255, 255, 255);
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 1px white;
+    color: white;
+    transition: 0.5s ease;
+    transform: translateX(-15rem);
+    opacity: 0;
+}
+
+input:checked ~ .sidebar{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+input:checked ~ .options{
+    transform: translateX(-15rem);
+    opacity: 1;
+}
+
+.header{
+    display: flex;
+    text-align: center;
+    padding: 0.625rem;
+    margin-bottom: 0.1rem;
+    border-bottom: 2px solid rgb(218, 217, 217);
+}
+
+.header h2{
+    flex-grow: 8;
+    letter-spacing: 1px;
+}
+
+.header h2:hover{
+  color: white;
+  text-shadow: 1px 1px 20px rgb(255, 255, 255, 0.5);
+}
+
+.header button{
+    flex-grow: 2;
+    background-color: transparent;
+    border: none;
+    align-self: center;
+}
+
+.header i{
+    font-size: 1.2rem;
+    -webkit-text-stroke: 2.3px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header i:hover{
+    color: rgba(255, 255, 255);
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
+}
+
+.items{
+    display: flex;
+    padding: 1rem 1.563rem;
+    gap: 0.8rem;
+    border: 1px solid transparent;
+}
+
+.items:hover{
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+.items i{
+    font-size: 1.2rem;
+    align-self: center;
+    color: rgba(255, 255, 255, 0.7);
+
+}
+
+.items:hover i{
+    color: rgba(255, 255, 255);
+    text-shadow: 1px 1px 30px rgb(255, 255, 255);
+}
+
+.items p{
+    font-size: 1.2rem;
+    align-self: center;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 20vh;
+    gap: 1.5rem;
+    margin-top: auto;
+    padding-bottom: 2rem;
+}
+
+.footer i{
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer i:hover{
+    color: rgba(255, 255, 255);
+    text-shadow: 1px 1px 25px;
+}
